@@ -9,7 +9,7 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self):
-        actual_url = self.browser.current_url()
+        actual_url = self.browser.current_url
         assert "login" in actual_url
         assert True
 
