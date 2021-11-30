@@ -4,6 +4,7 @@ from pages.base_page import BasePage
 from pages.locators import ProductPageLocators
 from selenium.common.exceptions import NoAlertPresentException
 
+
 class ProductPage(BasePage):
     def click_add_to_basket_button(self):
         button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON)
