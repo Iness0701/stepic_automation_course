@@ -42,5 +42,12 @@ class ProductPage(BasePage):
         product_price = self.get_product_price()
         assert product_price in alert_text
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.ALERT_ITEM_ADDED_TO_BASKET), \
+            "Success message is presented, but should not be"
+
+    def success_message_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.ALERT_ITEM_ADDED_TO_BASKET), \
+            "Success message is presented, but should not be"
 
 
